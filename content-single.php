@@ -26,29 +26,11 @@
           ?>
 		      </p>
           <p class="small text-muted font-italic">
-                    <?php echo wp_trim_words( get_the_content(), 12 ); ?>
-                        </p>
-          <p class="alert-link">
-          <a href="<?php the_permalink(); ?>">
-				    Continue Reading...
-		      </a>
+                    <?php the_content( ); ?>
           </p>
-
-
         </article>
 
-      <?php endwhile; ?>
-      <nav class="blog-pagination" aria-label="Pagination">
-        <a class="btn btn-outline-primary" href="#">
-        <?php echo paginate_links(  ); ?>
-        </a>
-        
-      </nav>
-      
-      <?php else: endif; ?>
-
-      
-
+      <?php endwhile; else: endif; ?>
     </div>
 
     <div class="col-md-4">
